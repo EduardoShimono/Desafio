@@ -3,7 +3,8 @@ public class Audio {
     private double duracao;
     private int totalDeReproducoes;
     private int curtidas;
-    private int Classificacao;
+    private int classificacao;
+    private boolean incluidoNoPlano;
 
     public void curtir() {
         this.curtidas++;
@@ -44,9 +45,9 @@ public class Audio {
         this.curtidas = curtidas;
     }
     public int getClassificacao() {
-        return Classificacao;
+        return classificacao;
     }
     public void setClassificacao(int classificacao) {
-        Classificacao = classificacao;
+        this.classificacao = classificacao;
     }
 }
