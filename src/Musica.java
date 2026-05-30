@@ -10,6 +10,11 @@ public class Musica extends Audio{
         }else {
             return 7;
         }
+        @Override
+        void exibirFichaTecnica() {
+            super.exibirFichaTecnica();
+            System.out.println("Album: " + album);
+        }
     }
 
     public String getCantor() {

@@ -18,6 +18,7 @@ public class Audio {
         System.out.println("Título:" + titulo);
         System.out.println("duração:" + duracao);
         System.out.println("Curtidas:" + curtidas);
+        System.out.println("é incluido no plano: " + incluidoNoPlano);
     }
 
     public String getTitulo() {
