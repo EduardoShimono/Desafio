@@ -1,3 +1,5 @@
+package br.com.alura.minhasmusicas.modelos;
+
 public class Audio {
     private String titulo;
     private double duracao;
@@ -6,13 +8,14 @@ public class Audio {
     private int classificacao;
     private boolean incluidoNoPlano;
 
+    public Audio() {
+    }
+
     public void curtir() {
         this.curtidas++;
-        System.out.println("você acabou de curtir o titulo " + titulo);
     }
     public void repoduzir(){
         this.totalDeReproducoes++;
-        System.out.println("O numero de repoduções do titulo aumentou.");
     }
     public void exibirFichaTecnica(){
         System.out.println("Título:" + titulo);
@@ -36,19 +39,17 @@ public class Audio {
     public int getTotalDeReproducoes() {
         return totalDeReproducoes;
     }
-    public void setTotalDeReproducoes(int totalDeReproducoes) {
-        this.totalDeReproducoes = totalDeReproducoes;
-    }
     public int getCurtidas() {
         return curtidas;
     }
-    public void setCurtidas(int curtidas) {
-        this.curtidas = curtidas;
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
     }
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
     public int getClassificacao() {
         return classificacao;
-    }
-    public void setClassificacao(int classificacao) {
-        this.classificacao = classificacao;
     }
 }

@@ -1,20 +1,30 @@
-public class Musica extends Audio{
+package br.com.alura.minhasmusicas.modelos;
+
+public class Musica extends Audio {
     private String cantor;
     private int anoDeLancamento;
     private String album;
+    private String genero;
+
+    public Musica() {
+    }
 
     @Override
     public int getClassificacao() {
-        if (getCurtidas() > 500) {
+        if (this.getTotalDeReproducoes() > 2000) {
          return 10;
         }else {
             return 7;
         }
-        @Override
-        void exibirFichaTecnica() {
-            super.exibirFichaTecnica();
-            System.out.println("Album: " + album);
-        }
+
+    }
+    @Override
+    public void exibirFichaTecnica() {
+        super.exibirFichaTecnica();
+        System.out.println("Cantor: " + cantor);
+        System.out.println("Álbum: " + album);
+        System.out.println("Ano de Lançamento: " + anoDeLancamento);
+        System.out.println("Gênero: " + genero);
     }
 
     public String getCantor() {
@@ -34,5 +44,11 @@ public class Musica extends Audio{
     }
     public void setAlbum(String album) {
         this.album = album;
+    }
+    public String getGenero() {
+        return genero;
+    }
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 }
